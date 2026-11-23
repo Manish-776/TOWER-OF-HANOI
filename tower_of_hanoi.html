@@ -159,7 +159,7 @@
         element.querySelectorAll(".disk").forEach(disk => disk.remove());
         element.classList.toggle("selected", selectedTower === index);
 
-        towers[index].forEach(size => {
+        [...towers[index]].reverse().forEach(size => {
           const disk = document.createElement("div");
           disk.className = "disk";
           const max = Number(countSelect.value);
